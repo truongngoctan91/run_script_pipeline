@@ -26,6 +26,7 @@ pipeline {
         }
         stage('Full path') {
             steps {
+                echo pwd()
                 sh("${env.WORKSPACE}/scripts/fibonacci.sh ${env.NUMBER}")
             }
         }
